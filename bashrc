@@ -5,7 +5,7 @@ safe_source() {
 
 # autocompletion
 safe_source /usr/local/etc/bash_completion.d/brew
-safe_source /usr/local/etc/bash_completion.d/git-completion.bash
+safe_source /opt/homebrew/etc/bash_completion.d/git-completion.bash
 safe_source /usr/share/bash-completion/completions/git
 __git_complete g __git_main
 safe_source /usr/local/etc/bash_completion.d/tmux
@@ -50,8 +50,8 @@ export PATH="~/bin:$PATH"
 export PATH="~/.cargo/bin:$PATH"
 export PATH="~/.cabal/bin:$PATH"
 export PATH="~/.local/bin:$PATH"
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+# export PATH="$HOME/.rbenv/bin:$PATH"
+# eval "$(rbenv init -)"
 safe_source ~/dotfiles/prompt.bash
 safe_source ~/dotfiles/local.bash
 bind -x '"\C-b": fbr' # bind ^b to fbr
@@ -59,3 +59,16 @@ shopt -s cdspell
 export HISTIGNORE="git s:cd:git push:git pull:fg:vim:gv:gv_master:rc"
 alias gi="git"
 export REVIEW_BASE="master"
+
+function clause() {
+    # from https://www.asciiart.eu/art/d7c9d38bb60979b8
+    echo "  .-""-."
+    echo " /,..___\\"
+    echo "() {_____}"
+    echo "  (/-@-@-\\)"
+    echo "  {\`-=^=-'}"
+    echo "  {  \`-'  } Max"
+    echo "   {     }"
+    echo "    \`---'"
+    claude
+}

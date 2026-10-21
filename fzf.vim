@@ -1,4 +1,4 @@
-let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
+" let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
 
 autocmd VimEnter * command! -bang -nargs=* Ag
   \ call fzf#vim#ag(<q-args>,

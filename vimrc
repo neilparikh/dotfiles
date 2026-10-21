@@ -5,6 +5,7 @@ call plug#begin('~/.vim/plugged')
 
 " Colorschemes
 Plug 'git@github.com:neilparikh/dracula-vim.git'
+Plug 'dracula/vim'
 Plug 'junegunn/seoul256.vim'
 Plug 'morhetz/gruvbox'
 Plug 'sickill/vim-monokai'
@@ -228,3 +229,5 @@ endif
 if filereadable($HOME."/dotfiles/local.vim")
     source ~/dotfiles/local.vim
 endif
+
+autocmd FileType html setlocal shiftwidth=2 softtabstop=2 expandtab
